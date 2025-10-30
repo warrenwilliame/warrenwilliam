@@ -13,7 +13,7 @@
 
       <!-- Headings -->
       <h1>Resume — William Warren</h1>
-      <h2>Texas A&amp;M University Student</h2>
+      <h2>Texas A&M University Student</h2>
       <h4>Clarendon, TX • 806-217-2473</h4>
 
       <hr width="300">
@@ -34,7 +34,7 @@
       <div id="education">
         <h2>Education</h2>
         <ol style="display:inline-block; text-align:left;">
-          <li><b>Texas A&amp;M University</b> — College Station, TX
+          <li><b>Texas A&M University</b> — College Station, TX
             <ul>
               <li>Bachelor’s Degree, Expected May 2028</li>
               <li>Undergraduate GPA: 3.0</li>
@@ -55,7 +55,7 @@
       <div id="work">
         <h2>Work Experience</h2>
 
-        <h3>Contractor — Holt &amp; Barnhart Construction</h3>
+        <h3>Contractor — Holt & Barnhart Construction</h3>
         <ul style="display:inline-block; text-align:left;">
           <li>Installed warehouse storage structures and braces.</li>
           <li>Traveled with crew to Austin, TX and Atlanta, GA.</li>
@@ -67,7 +67,7 @@
           <li>Certified in CPR and first aid; inspected pool equipment.</li>
         </ul>
 
-        <h3>Cook — Refz Sports Bar &amp; Grill</h3>
+        <h3>Cook — Refz Sports Bar & Grill</h3>
         <ul style="display:inline-block; text-align:left;">
           <li>Operated fryers, grills, and salad bar during rush hours.</li>
           <li>Assisted customers and helped with front-of-house tasks.</li>
@@ -80,26 +80,24 @@
       <div id="skills">
         <h2>Skills</h2>
         <ul style="display:inline-block; text-align:left;">
-          <li>Communication &amp; Teamwork</li>
-          <li>Time Management &amp; Attention to Detail</li>
-          <li>Problem-Solving &amp; Adaptability</li>
-          <li>Customer Service &amp; Professionalism</li>
+          <li>Communication & Teamwork</li>
+          <li>Time Management & Attention to Detail</li>
+          <li>Problem-Solving & Adaptability</li>
+          <li>Customer Service & Professionalism</li>
         </ul>
       </div>
 
       <hr width="300">
 
-      <!-- Certifications and Image -->
+      <!-- Certifications -->
       <div id="certs">
         <h2>Certifications</h2>
-        <p>TCFA Feedyard Technician — Machinery Operation, Repair, &amp; Maintenance</p>
-        <img src="tractor.jpg" width="350" height="230"
-             alt="Agricultural machinery operating in the field">
+        <p>TCFA Feedyard Technician — Machinery Operation, Repair, & Maintenance</p>
       </div>
 
       <hr width="300">
 
-      <!-- Embedded YouTube Video -->
+      <!-- YouTube Video -->
       <div id="video">
         <h2>Featured Video</h2>
         <iframe width="560" height="315"
@@ -107,42 +105,54 @@
           title="Feedyard Tech"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen()
+          allowfullscreen>
         </iframe>
       </div>
 
       <hr width="300">
 
-      <!-- Tableau (official embed) -->
-      <div class="tableauPlaceholder" id="vizStorms" style="position:relative; text-align:center;">
-        <noscript>
-          <a href="#"><img alt="Storms"
-            src="https://public.tableau.com/static/images/Re/RegionalSampleWorkbook/Storms/1.png" /></a>
-        </noscript>
-        <object class="tableauViz" style="display:none;">
-          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
-          <param name="embed_code_version" value="3"/>
-          <param name="site_root" value=""/>
-          <param name="name" value="RegionalSampleWorkbook/Storms"/>
-          <param name="tabs" value="no"/>
-          <param name="toolbar" value="yes"/>
-          <param name="animate_transition" value="yes"/>
-          <param name="display_spinner" value="yes"/>
-          <param name="display_overlay" value="yes"/>
-          <param name="display_count" value="yes"/>
-        </object>
+      <div style="text-align:center;">
+        <div class="tableauPlaceholder" id="vizStorms" style="position:relative; display:inline-block;">
+          <noscript>
+            <a href="#">
+              <img alt="Storms"
+                  src="https://public.tableau.com/static/images/Re/RegionalSampleWorkbook/Storms/1.png"
+                  style="border:none;" />
+            </a>
+          </noscript>
+          <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+            <param name="embed_code_version" value="3"/>
+            <param name="site_root" value=""/>
+            <param name="name" value="RegionalSampleWorkbook/Storms"/>
+            <param name="tabs" value="yes"/>
+            <param name="toolbar" value="yes"/>
+            <param name="static_image" value="https://public.tableau.com/static/images/Re/RegionalSampleWorkbook/Storms/1.png"/>
+            <param name="animate_transition" value="yes"/>
+            <param name="display_static_image" value="yes"/>
+            <param name="display_spinner" value="yes"/>
+            <param name="display_overlay" value="yes"/>
+            <param name="display_count" value="yes"/>
+            <param name="language" value="en-US"/>
+          </object>
+        </div>
       </div>
-      <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
       <script>
-        // set explicit size so it shows up
-        const vizDiv = document.getElementById('vizStorms');
-        const vizObj = vizDiv.getElementsByTagName('object')[0];
-        vizObj.style.width = '800px';
-        vizObj.style.height = '500px';
+        // Size the viz explicitly and load the API once
+        (function () {
+          var divElement = document.getElementById('vizStorms');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          vizElement.style.width = '800px';
+          vizElement.style.height = '520px';
+
+          // Avoid adding the script multiple times if you embed more than one viz
+          if (!document.querySelector('script[src="https://public.tableau.com/javascripts/api/viz_v1.js"]')) {
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            document.body.appendChild(scriptElement);
+          }
+        })();
       </script>
-
-
-
 
       <hr width="300">
 
@@ -156,6 +166,3 @@
 </table>
 </body>
 </html>
-
-
-

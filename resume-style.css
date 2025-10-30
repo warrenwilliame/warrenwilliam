@@ -1,0 +1,34 @@
+body {
+  background-color: #e5f0ff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: #800000;
+}
+
+a {
+  color: #004b8d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+#certs img {
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+iframe {
+  border-radius: 10px;
+}

@@ -113,27 +113,34 @@
 
       <hr width="300">
 
-      <div class='tableauPlaceholder' id='vizStorms' style='position:relative'>
+      <!-- Tableau (official embed) -->
+      <div class="tableauPlaceholder" id="vizStorms" style="position:relative; text-align:center;">
         <noscript>
-          <a href='#'><img alt='Storms'
-            src='https://public.tableau.com/static/images/Re/RegionalSampleWorkbook/Storms/1.png' /></a>
+          <a href="#"><img alt="Storms"
+            src="https://public.tableau.com/static/images/Re/RegionalSampleWorkbook/Storms/1.png" /></a>
         </noscript>
-        <object class='tableauViz' width='800' height='500' style='display:none;'>
-          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-          <param name='embed_code_version' value='3' />
-          <param name='site_root' value='' />
-          <param name='name' value='RegionalSampleWorkbook/Storms' />
-          <param name='tabs' value='no' />
-          <param name='toolbar' value='yes' />
-          <param name='static_image'
-                 value='https://public.tableau.com/static/images/Re/RegionalSampleWorkbook/Storms/1.png' />
-          <param name='animate_transition' value='yes' />
-          <param name='display_spinner' value='yes' />
-          <param name='display_overlay' value='yes' />
-          <param name='display_count' value='yes' />
+        <object class="tableauViz" style="display:none;">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+          <param name="embed_code_version" value="3"/>
+          <param name="site_root" value=""/>
+          <param name="name" value="RegionalSampleWorkbook/Storms"/>
+          <param name="tabs" value="no"/>
+          <param name="toolbar" value="yes"/>
+          <param name="animate_transition" value="yes"/>
+          <param name="display_spinner" value="yes"/>
+          <param name="display_overlay" value="yes"/>
+          <param name="display_count" value="yes"/>
         </object>
       </div>
-      <script src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+      <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
+      <script>
+        // set explicit size so it shows up
+        const vizDiv = document.getElementById('vizStorms');
+        const vizObj = vizDiv.getElementsByTagName('object')[0];
+        vizObj.style.width = '800px';
+        vizObj.style.height = '500px';
+      </script>
+
 
 
 
@@ -149,5 +156,6 @@
 </table>
 </body>
 </html>
+
 
 
